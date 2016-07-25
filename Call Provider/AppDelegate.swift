@@ -19,7 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { [weak self] (granted, error) in
             if granted {
                 self?.registerCategories()
-                application.registerForRemoteNotifications()
             }
         }
         
@@ -27,26 +26,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func registerCategories() {
-        let addBalanceAction = UNNotificationAction(identifier: "addBalance", title: "Пополнить на 500 ₽", options: [])
-        let myPlanAction = UNNotificationAction(identifier: "myPlan", title: "Мой тариф", options: [])
+        let showMore = UNNotificationAction(identifier: "showMore",
+                                            title: "Подробнее",
+                                            options: [])
+        let addBalanceAction = UNNotificationAction(identifier: "addBalance",
+                                                    title: "Пополнить на 500 ₽",
+                                                    options: [])
+        let myPlanAction = UNNotificationAction(identifier: "myPlan",
+                                                title: "Мой тариф",
+                                                options: [])
         
-        let balanceCategory = UNNotificationCategory(identifier: "balance", actions: [addBalanceAction, myPlanAction], intentIdentifiers: [], options: [])
+        let balanceCategory = UNNotificationCategory(identifier: "balance",
+                                                     actions: [showMore, addBalanceAction, myPlanAction],
+                                                     intentIdentifiers: [],
+                                                     options: [])
         
         UNUserNotificationCenter.current().setNotificationCategories([balanceCategory])
     }
-
-    func application(_ application: UIApplication,
-                     didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        let characterSet = CharacterSet(charactersIn: "<>")
-        
-        let deviceTokenString = ((deviceToken.description as NSString).trimmingCharacters(in: characterSet) as NSString).replacingOccurrences(of: " ", with: "") as String
-        
-        print(deviceTokenString)
-    }
     
-    func application(_ application: UIApplication,
-                     didFailToRegisterForRemoteNotificationsWithError error: NSError) {
-        print(error)
+    func application(_ app: UIApplication,
+                     open url: URL,
+                     options: [String : AnyObject] = [:]) -> Bool {
+        return true
     }
 }
 

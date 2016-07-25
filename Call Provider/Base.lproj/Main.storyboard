@@ -18,61 +18,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Баланс" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4i-vd-hkK">
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".SF UI Text" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MBT-nG-Tyt">
-                                <attributedString key="attributedText">
-                                    <fragment content="540">
-                                        <attributes>
-                                            <font key="NSFont" size="36" name=".AppleSystemUIFont"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="₽">
-                                        <attributes>
-                                            <font key="NSFont" size="24" name=".AppleSystemUIFont"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="BCa-Fk-r4t">
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+10 ₽ бонусных " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hiQ-qG-F4y">
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".SF UI Text" pointSize="14"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+100 ₽ корпоративных" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPv-DZ-WPf">
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".SF UI Text" pointSize="14"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="100" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="vUG-KK-Ee7"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QTm-18-joA">
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".SF UI Text" pointSize="25"/>
+                                <state key="normal" title="Send notification"/>
+                                <connections>
+                                    <action selector="sendNotification" destination="BYZ-38-t0r" eventType="touchUpInside" id="PqV-MG-S1l"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="vUG-KK-Ee7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="28" id="0Bv-48-6yS"/>
-                            <constraint firstItem="MBT-nG-Tyt" firstAttribute="top" secondItem="G4i-vd-hkK" secondAttribute="bottom" id="8Pf-xR-Rci"/>
-                            <constraint firstItem="MBT-nG-Tyt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="9Bl-5O-FCW"/>
-                            <constraint firstItem="vUG-KK-Ee7" firstAttribute="top" relation="greaterThanOrEqual" secondItem="BCa-Fk-r4t" secondAttribute="bottom" constant="8" id="FMg-zR-MLt"/>
-                            <constraint firstItem="MBT-nG-Tyt" firstAttribute="leading" secondItem="G4i-vd-hkK" secondAttribute="leading" id="GfB-Cm-hxG"/>
-                            <constraint firstAttribute="trailing" secondItem="BCa-Fk-r4t" secondAttribute="trailing" constant="32" id="MiK-Zm-P6N"/>
-                            <constraint firstItem="BCa-Fk-r4t" firstAttribute="leading" secondItem="MBT-nG-Tyt" secondAttribute="trailing" constant="32" id="N6n-vL-4Er"/>
-                            <constraint firstItem="BCa-Fk-r4t" firstAttribute="top" secondItem="MBT-nG-Tyt" secondAttribute="top" id="OZv-T0-kbT"/>
-                            <constraint firstItem="vUG-KK-Ee7" firstAttribute="top" secondItem="MBT-nG-Tyt" secondAttribute="bottom" constant="16" id="PnF-CM-cVd"/>
-                            <constraint firstItem="MBT-nG-Tyt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="UxZ-kR-kqO"/>
-                            <constraint firstAttribute="trailing" secondItem="vUG-KK-Ee7" secondAttribute="trailing" constant="28" id="Xeb-T8-pvi"/>
+                            <constraint firstItem="QTm-18-joA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="99f-01-MCX"/>
+                            <constraint firstItem="QTm-18-joA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kdm-3q-jgY"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="balance" destination="MBT-nG-Tyt" id="RQD-of-sYA"/>
-                        <outlet property="container" destination="vUG-KK-Ee7" id="mwM-Mk-M5s"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

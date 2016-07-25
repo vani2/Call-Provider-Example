@@ -55,17 +55,21 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="100" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="OX7-RW-bdv"/>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="r2h-0M-SH3"/>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6Xj-Ml-XrE" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="25" id="Dyo-kb-4da"/>
+                            <constraint firstItem="r2h-0M-SH3" firstAttribute="top" secondItem="JK1-iM-bJz" secondAttribute="bottom" constant="10" id="Dpl-KP-5MN"/>
                             <constraint firstItem="OX7-RW-bdv" firstAttribute="top" secondItem="6Xj-Ml-XrE" secondAttribute="bottom" constant="16" id="LQZ-Fe-N0E"/>
                             <constraint firstItem="OX7-RW-bdv" firstAttribute="top" relation="greaterThanOrEqual" secondItem="FiS-ne-cN2" secondAttribute="bottom" constant="8" id="ZAX-h6-lNJ"/>
                             <constraint firstItem="FiS-ne-cN2" firstAttribute="leading" secondItem="6Xj-Ml-XrE" secondAttribute="trailing" constant="32" id="box-5w-X7M"/>
+                            <constraint firstItem="r2h-0M-SH3" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" constant="32" id="cqu-eM-PNG"/>
                             <constraint firstItem="OX7-RW-bdv" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" constant="30" id="dAY-Fi-qxY"/>
                             <constraint firstItem="6Xj-Ml-XrE" firstAttribute="leading" secondItem="JK1-iM-bJz" secondAttribute="leading" id="dH6-Qc-8Fe"/>
                             <constraint firstAttribute="trailing" secondItem="OX7-RW-bdv" secondAttribute="trailing" constant="30" id="fl0-to-oEj"/>
                             <constraint firstItem="6Xj-Ml-XrE" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" constant="20" id="qri-x0-BIW"/>
+                            <constraint firstItem="6Xj-Ml-XrE" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="25" id="tSo-0X-uu5"/>
                             <constraint firstItem="6Xj-Ml-XrE" firstAttribute="top" secondItem="JK1-iM-bJz" secondAttribute="bottom" id="twD-j6-OY3"/>
                             <constraint firstItem="FiS-ne-cN2" firstAttribute="top" secondItem="6Xj-Ml-XrE" secondAttribute="top" id="v5v-v2-gMu"/>
                         </constraints>
@@ -77,6 +81,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="300"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="r2h-0M-SH3" id="ure-7b-bAy"/>
                         <outlet property="balanceLabel" destination="6Xj-Ml-XrE" id="8k2-dI-6EM"/>
                         <outlet property="restsStack" destination="OX7-RW-bdv" id="QdX-li-885"/>
                     </connections>
@@ -91,4 +96,5 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
+    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
 </document>

@@ -14,11 +14,8 @@ class NotificationViewController: UIViewController {
 
     @IBOutlet weak var balanceLabel: UILabel!
     @IBOutlet weak var restsStack: UIStackView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -33,11 +30,49 @@ class NotificationViewController: UIViewController {
     }
 }
 
+
+
+// MARK: - UNNotificationContentExtension
+
 extension NotificationViewController: UNNotificationContentExtension {
     
-    func didReceive(_ notification: UNNotification) {
-        let info = notification.request.content.userInfo
+    func didReceive(_ response: UNNotificationResponse,
+                    completionHandler completion: (UNNotificationContentExtensionResponseOption) -> Void) {
         
+        switch response.actionIdentifier {
+        case "addBalance":
+            addBalance()
+        case "myPlan":
+            openMainApplication()
+            completion(.dismiss)
+        case "showMore":
+            openMainApplication()
+            completion(.dismiss)
+        default:
+            completion(.dismiss)
+        }
     }
+    
+    private func addBalance() {
+        
+        balanceLabel.isHidden = true
+        activityIndicator.isHidden = false
+        activityIndicator.startAnimating()
+
+        DispatchQueue.main.after(when: .now() + 2) {
+            withExtendedLifetime(self, {
+                self.balanceLabel.isHidden = false
+                self.activityIndicator.stopAnimating()
+            })
+        }
+    }
+    
+    private func openMainApplication() {
+        if let url = URL(string: "callProvider://") {
+            extensionContext?.open(url, completionHandler: nil)
+        }
+    }
+    
+    func didReceive(_ notification: UNNotification) {}
     
 }
