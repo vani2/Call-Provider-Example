@@ -7,13 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AA313D3C1D3E2736002E274C /* ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA313D3B1D3E2736002E274C /* ViewFactory.swift */; };
-		AA313D3D1D3E2736002E274C /* ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA313D3B1D3E2736002E274C /* ViewFactory.swift */; };
 		AA5E68C21D36206F00F890FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5E68C11D36206F00F890FC /* AppDelegate.swift */; };
 		AA5E68C41D36206F00F890FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5E68C31D36206F00F890FC /* ViewController.swift */; };
 		AA5E68C71D36206F00F890FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA5E68C51D36206F00F890FC /* Main.storyboard */; };
 		AA5E68C91D36206F00F890FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA5E68C81D36206F00F890FC /* Assets.xcassets */; };
-		AA5E68CC1D36206F00F890FC /* (null) in Resources */ = {isa = PBXBuildFile; };
+		AA5E68CC1D36206F00F890FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA5E68CA1D36206F00F890FC /* LaunchScreen.storyboard */; };
 		AA5E68DA1D36217E00F890FC /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5E68D91D36217E00F890FC /* UserNotifications.framework */; };
 		AA5E68DC1D36217E00F890FC /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5E68DB1D36217E00F890FC /* UserNotificationsUI.framework */; };
 		AA5E68DF1D36217E00F890FC /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5E68DE1D36217E00F890FC /* NotificationViewController.swift */; };
@@ -23,7 +21,6 @@
 		AA5E68EF1D362D0B00F890FC /* SpinnerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA5E68EE1D362D0B00F890FC /* SpinnerView.xib */; };
 		AA5E68F01D36525C00F890FC /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5E68EC1D362CDB00F890FC /* SpinnerView.swift */; };
 		AA5E68F11D36525C00F890FC /* SpinnerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA5E68EE1D362D0B00F890FC /* SpinnerView.xib */; };
-		AA6F945A1D461B1C000AC288 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA6F94581D461B1C000AC288 /* LaunchScreen.storyboard */; };
 		AABDA66D1D36620000CE1E2E /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDA6611D36620000CE1E2E /* Constraint.swift */; };
 		AABDA66E1D36620000CE1E2E /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDA6611D36620000CE1E2E /* Constraint.swift */; };
 		AABDA66F1D36620000CE1E2E /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDA6621D36620000CE1E2E /* ConstraintAttributes.swift */; };
@@ -81,12 +78,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		AA313D3B1D3E2736002E274C /* ViewFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewFactory.swift; path = Classes/Helpers/ViewFactory.swift; sourceTree = "<group>"; };
 		AA5E68BE1D36206F00F890FC /* Call Provider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Call Provider.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA5E68C11D36206F00F890FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA5E68C31D36206F00F890FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AA5E68C61D36206F00F890FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AA5E68C81D36206F00F890FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA5E68CB1D36206F00F890FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA5E68CD1D36206F00F890FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA5E68D71D36217E00F890FC /* Notifier.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Notifier.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA5E68D91D36217E00F890FC /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
@@ -94,9 +91,8 @@
 		AA5E68DE1D36217E00F890FC /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		AA5E68E11D36217E00F890FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		AA5E68E31D36217E00F890FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AA5E68EC1D362CDB00F890FC /* SpinnerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpinnerView.swift; path = View/SpinnerView.swift; sourceTree = "<group>"; };
-		AA5E68EE1D362D0B00F890FC /* SpinnerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SpinnerView.xib; path = View/SpinnerView.xib; sourceTree = "<group>"; };
-		AA6F94591D461B1C000AC288 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = View/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AA5E68EC1D362CDB00F890FC /* SpinnerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinnerView.swift; sourceTree = "<group>"; };
+		AA5E68EE1D362D0B00F890FC /* SpinnerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpinnerView.xib; sourceTree = "<group>"; };
 		AABDA6611D36620000CE1E2E /* Constraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constraint.swift; sourceTree = "<group>"; };
 		AABDA6621D36620000CE1E2E /* ConstraintAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintAttributes.swift; sourceTree = "<group>"; };
 		AABDA6631D36620000CE1E2E /* ConstraintDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintDescription.swift; sourceTree = "<group>"; };
@@ -109,9 +105,9 @@
 		AABDA66A1D36620000CE1E2E /* SnapKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapKit.swift; sourceTree = "<group>"; };
 		AABDA66B1D36620000CE1E2E /* View+SnapKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+SnapKit.swift"; sourceTree = "<group>"; };
 		AABDA66C1D36620000CE1E2E /* ViewController+SnapKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+SnapKit.swift"; sourceTree = "<group>"; };
-		AABDA6851D36732900CE1E2E /* AccumulatorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AccumulatorView.xib; path = View/AccumulatorView.xib; sourceTree = "<group>"; };
-		AABDA6881D3675D000CE1E2E /* AccumulatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccumulatorView.swift; path = View/AccumulatorView.swift; sourceTree = "<group>"; };
-		AABDA68C1D36811C00CE1E2E /* AccumulatorViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccumulatorViewModel.swift; path = "View Model/AccumulatorViewModel.swift"; sourceTree = "<group>"; };
+		AABDA6851D36732900CE1E2E /* AccumulatorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AccumulatorView.xib; sourceTree = "<group>"; };
+		AABDA6881D3675D000CE1E2E /* AccumulatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccumulatorView.swift; sourceTree = "<group>"; };
+		AABDA68C1D36811C00CE1E2E /* AccumulatorViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccumulatorViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,19 +130,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AA313D3A1D3E270B002E274C /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				AA313D3B1D3E2736002E274C /* ViewFactory.swift */,
-			);
-			name = Helpers;
-			sourceTree = "<group>";
-		};
 		AA5E68B51D36206F00F890FC = {
 			isa = PBXGroup;
 			children = (
-				AA828B211D3E22FA00998913 /* Classes */,
 				AA5E68C01D36206F00F890FC /* Call Provider */,
+				AA828B211D3E22FA00998913 /* Classes */,
 				AA5E68D81D36217E00F890FC /* Frameworks */,
 				AA5E68DD1D36217E00F890FC /* Notifier */,
 				AA5E68BF1D36206F00F890FC /* Products */,
@@ -165,10 +153,10 @@
 		AA5E68C01D36206F00F890FC /* Call Provider */ = {
 			isa = PBXGroup;
 			children = (
-				AA5E68C11D36206F00F890FC /* AppDelegate.swift */,
 				AA828B231D3E232600998913 /* Resources */,
 				AA828B221D3E231400998913 /* View */,
 				AA828B241D3E233900998913 /* View Controller */,
+				AA5E68C11D36206F00F890FC /* AppDelegate.swift */,
 			);
 			path = "Call Provider";
 			sourceTree = "<group>";
@@ -176,7 +164,6 @@
 		AA5E68D81D36217E00F890FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AABDA6601D36620000CE1E2E /* SnapKit */,
 				AA5E68D91D36217E00F890FC /* UserNotifications.framework */,
 				AA5E68DB1D36217E00F890FC /* UserNotificationsUI.framework */,
 			);
@@ -201,27 +188,26 @@
 				AA5E68EC1D362CDB00F890FC /* SpinnerView.swift */,
 				AA5E68EE1D362D0B00F890FC /* SpinnerView.xib */,
 			);
-			name = View;
-			path = Notifier;
+			path = View;
 			sourceTree = "<group>";
 		};
 		AA828B211D3E22FA00998913 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				AA313D3A1D3E270B002E274C /* Helpers */,
+				AABD6D501D3E24B800111B75 /* External */,
 				AA5E68EB1D362CA100F890FC /* View */,
 				AABDA68B1D3680F800CE1E2E /* View Model */,
 			);
-			name = Classes;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		AA828B221D3E231400998913 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AA6F94581D461B1C000AC288 /* LaunchScreen.storyboard */,
+				AA5E68CA1D36206F00F890FC /* LaunchScreen.storyboard */,
 				AA5E68C51D36206F00F890FC /* Main.storyboard */,
 			);
-			name = View;
+			path = View;
 			sourceTree = "<group>";
 		};
 		AA828B231D3E232600998913 /* Resources */ = {
@@ -230,7 +216,7 @@
 				AA5E68C81D36206F00F890FC /* Assets.xcassets */,
 				AA5E68CD1D36206F00F890FC /* Info.plist */,
 			);
-			name = Resources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		AA828B241D3E233900998913 /* View Controller */ = {
@@ -238,7 +224,7 @@
 			children = (
 				AA5E68C31D36206F00F890FC /* ViewController.swift */,
 			);
-			name = "View Controller";
+			path = "View Controller";
 			sourceTree = "<group>";
 		};
 		AA828B251D3E235700998913 /* Resources */ = {
@@ -246,7 +232,7 @@
 			children = (
 				AA5E68E31D36217E00F890FC /* Info.plist */,
 			);
-			name = Resources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		AA828B261D3E236100998913 /* View */ = {
@@ -254,7 +240,7 @@
 			children = (
 				AA5E68E01D36217E00F890FC /* MainInterface.storyboard */,
 			);
-			name = View;
+			path = View;
 			sourceTree = "<group>";
 		};
 		AA828B271D3E236A00998913 /* View Controller */ = {
@@ -262,7 +248,15 @@
 			children = (
 				AA5E68DE1D36217E00F890FC /* NotificationViewController.swift */,
 			);
-			name = "View Controller";
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		AABD6D501D3E24B800111B75 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				AABDA6601D36620000CE1E2E /* SnapKit */,
+			);
+			path = External;
 			sourceTree = "<group>";
 		};
 		AABDA6601D36620000CE1E2E /* SnapKit */ = {
@@ -281,8 +275,7 @@
 				AABDA66B1D36620000CE1E2E /* View+SnapKit.swift */,
 				AABDA66C1D36620000CE1E2E /* ViewController+SnapKit.swift */,
 			);
-			name = SnapKit;
-			path = "Call Provider/SnapKit";
+			path = SnapKit;
 			sourceTree = "<group>";
 		};
 		AABDA68B1D3680F800CE1E2E /* View Model */ = {
@@ -290,8 +283,7 @@
 			children = (
 				AABDA68C1D36811C00CE1E2E /* AccumulatorViewModel.swift */,
 			);
-			name = "View Model";
-			path = Notifier;
+			path = "View Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -383,10 +375,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA5E68CC1D36206F00F890FC /* (null) in Resources */,
+				AA5E68CC1D36206F00F890FC /* LaunchScreen.storyboard in Resources */,
 				AA5E68C91D36206F00F890FC /* Assets.xcassets in Resources */,
 				AABDA6861D36732900CE1E2E /* AccumulatorView.xib in Resources */,
-				AA6F945A1D461B1C000AC288 /* LaunchScreen.storyboard in Resources */,
 				AA5E68F11D36525C00F890FC /* SpinnerView.xib in Resources */,
 				AA5E68C71D36206F00F890FC /* Main.storyboard in Resources */,
 			);
@@ -422,7 +413,6 @@
 				AABDA67D1D36620000CE1E2E /* LayoutConstraint.swift in Sources */,
 				AABDA68D1D36811C00CE1E2E /* AccumulatorViewModel.swift in Sources */,
 				AABDA6891D3675D000CE1E2E /* AccumulatorView.swift in Sources */,
-				AA313D3C1D3E2736002E274C /* ViewFactory.swift in Sources */,
 				AABDA6751D36620000CE1E2E /* ConstraintMaker.swift in Sources */,
 				AA5E68C21D36206F00F890FC /* AppDelegate.swift in Sources */,
 				AABDA6831D36620000CE1E2E /* ViewController+SnapKit.swift in Sources */,
@@ -450,7 +440,6 @@
 				AABDA68A1D3675D000CE1E2E /* AccumulatorView.swift in Sources */,
 				AABDA6741D36620000CE1E2E /* ConstraintItem.swift in Sources */,
 				AABDA6821D36620000CE1E2E /* View+SnapKit.swift in Sources */,
-				AA313D3D1D3E2736002E274C /* ViewFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +460,16 @@
 				AA5E68C61D36206F00F890FC /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
+			sourceTree = "<group>";
+		};
+		AA5E68CA1D36206F00F890FC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA5E68CB1D36206F00F890FC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		AA5E68E01D36217E00F890FC /* MainInterface.storyboard */ = {
@@ -479,14 +478,7 @@
 				AA5E68E11D36217E00F890FC /* Base */,
 			);
 			name = MainInterface.storyboard;
-			sourceTree = "<group>";
-		};
-		AA6F94581D461B1C000AC288 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AA6F94591D461B1C000AC288 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -586,8 +578,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = "Call Provider/Info.plist";
+				INFOPLIST_FILE = "Call Provider/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ivanvavilov.Call-Provider";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -600,8 +591,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = "Call Provider/Info.plist";
+				INFOPLIST_FILE = "Call Provider/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ivanvavilov.Call-Provider";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -612,13 +602,10 @@
 		AA5E68E81D36217E00F890FC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = Notifier/Info.plist;
+				INFOPLIST_FILE = Notifier/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ivanvavilov.Call-Provider.Notifier";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -627,8 +614,7 @@
 		AA5E68E91D36217E00F890FC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = Notifier/Info.plist;
+				INFOPLIST_FILE = Notifier/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ivanvavilov.Call-Provider.Notifier";
 				PRODUCT_NAME = "$(TARGET_NAME)";
