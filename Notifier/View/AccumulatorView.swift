@@ -17,38 +17,33 @@ class AccumulatorView: UIView {
     
     private weak var spinner: SpinnerView?
     
-    var viewModel: AccumulatorViewModel!
-    {
-        didSet
-        {
+    var viewModel: AccumulatorViewModel! {
+        didSet {
             valueLabel.text = viewModel.value
             unitLabel.text = viewModel.unit
             spinner?.endValue = viewModel.progress
         }
     }
     
-    override func awakeFromNib()
-    {
+    override func awakeFromNib() {
         super.awakeFromNib()
         
         setupSubviews()
     }
     
-    private func setupSubviews()
-    {
+    private func setupSubviews() {
         spinner = Bundle.main.loadNibNamed("SpinnerView",
                                            owner: nil,
-                                           options: nil)?.first as! SpinnerView
+                                           options: nil)?.first as? SpinnerView
         addSubview(spinner!)
         
         spinner!.snp_makeConstraints { (make) in
-            make.leading.trailing.top.equalTo(0)
-            make.height.equalTo(spinner!.snp_width)
+            _ = make.leading.trailing.top.equalTo(0)
+            _ = make.height.equalTo(spinner!.snp_width)
         }
     }
     
-    override func layoutSubviews()
-    {
+    override func layoutSubviews() {
         super.layoutSubviews()
         
         topLabelSpace.constant = bounds.width / 2 - valueLabel.font.lineHeight / 2

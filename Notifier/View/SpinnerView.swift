@@ -21,16 +21,13 @@ class SpinnerView: UIView {
     let progressLayer = CAShapeLayer()
     let fillLayer = CAShapeLayer()
     
-    var endValue: CGFloat = 0
-    {
-        didSet
-        {
+    var endValue: CGFloat = 0 {
+        didSet {
             animateStroke()
         }
     }
     
-    override func awakeFromNib()
-    {
+    override func awakeFromNib() {
         super.awakeFromNib()
         setupFillLayer()
         setupLayer()
@@ -41,8 +38,7 @@ class SpinnerView: UIView {
         updatePath()
     }
     
-    private func setupLayer()
-    {
+    private func setupLayer() {
         progressLayer.position = CGPoint.zero
         progressLayer.lineWidth = 4
         progressLayer.strokeStart = 0
@@ -64,8 +60,7 @@ class SpinnerView: UIView {
         layer.addSublayer(fillLayer)
     }
     
-    private func updatePath()
-    {
+    private func updatePath() {
         let radius = CGFloat(bounds.height / 2) - progressLayer.lineWidth
         let startAngle = CGFloat(-M_PI / 2)
         let endAngle = CGFloat(3 * M_PI / 2)
@@ -80,8 +75,7 @@ class SpinnerView: UIView {
         fillLayer.path = path.cgPath
     }
     
-    private func animateStroke()
-    {
+    private func animateStroke() {
         if endValue > 0 {
             let animation = CABasicAnimation(keyPath: "strokeEnd")
             animation.fromValue = 0

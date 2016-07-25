@@ -40,7 +40,7 @@ class ViewController: UIViewController {
         let request = UNNotificationRequest(
                 identifier: "balance",
                 content: content,
-                trigger: UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false))
+                trigger: UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: true))
         
         UNUserNotificationCenter.current().add(request){ (error) in
             guard let error = error else { return }
