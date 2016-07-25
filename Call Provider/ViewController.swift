@@ -30,6 +30,7 @@ class ViewController: UIViewController {
     }
     
     private func sendFakeNotification() {
+        
         let content = UNMutableNotificationContent()
         content.title = "Добрый день!"
         content.subtitle = "Ваш карманный друг"
@@ -67,6 +68,8 @@ extension ViewController: UNUserNotificationCenterDelegate {
         withCompletionHandler completionHandler: () -> Void) {
         
         print("ACTION ID = \(response.actionIdentifier)")
+        
+        completionHandler()
     }
     
 }
