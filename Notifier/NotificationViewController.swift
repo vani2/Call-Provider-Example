@@ -16,7 +16,6 @@ class NotificationViewController: UIViewController {
     @IBOutlet weak var restsStack: UIStackView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -54,7 +53,6 @@ extension NotificationViewController: UNNotificationContentExtension {
     }
     
     private func addBalance() {
-        
         balanceLabel.isHidden = true
         activityIndicator.isHidden = false
         activityIndicator.startAnimating()

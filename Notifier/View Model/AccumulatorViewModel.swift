@@ -14,8 +14,7 @@ class AccumulatorViewModel {
     private(set) var unit: String
     private(set) var progress: CGFloat
     
-    init(value: String, unit: String, progress: CGFloat)
-    {
+    init(value: String, unit: String, progress: CGFloat) {
         self.value = value
         self.unit = unit
         self.progress = progress

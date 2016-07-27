@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AA313D3C1D3E2736002E274C /* ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA313D3B1D3E2736002E274C /* ViewFactory.swift */; };
 		AA313D3D1D3E2736002E274C /* ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA313D3B1D3E2736002E274C /* ViewFactory.swift */; };
 		AA5E68C21D36206F00F890FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5E68C11D36206F00F890FC /* AppDelegate.swift */; };
 		AA5E68C41D36206F00F890FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5E68C31D36206F00F890FC /* ViewController.swift */; };
@@ -21,8 +20,6 @@
 		AA5E68E61D36217E00F890FC /* Notifier.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = AA5E68D71D36217E00F890FC /* Notifier.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		AA5E68ED1D362CDB00F890FC /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5E68EC1D362CDB00F890FC /* SpinnerView.swift */; };
 		AA5E68EF1D362D0B00F890FC /* SpinnerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA5E68EE1D362D0B00F890FC /* SpinnerView.xib */; };
-		AA5E68F01D36525C00F890FC /* SpinnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA5E68EC1D362CDB00F890FC /* SpinnerView.swift */; };
-		AA5E68F11D36525C00F890FC /* SpinnerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA5E68EE1D362D0B00F890FC /* SpinnerView.xib */; };
 		AA6F945A1D461B1C000AC288 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA6F94581D461B1C000AC288 /* LaunchScreen.storyboard */; };
 		AABDA66D1D36620000CE1E2E /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDA6611D36620000CE1E2E /* Constraint.swift */; };
 		AABDA66E1D36620000CE1E2E /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDA6611D36620000CE1E2E /* Constraint.swift */; };
@@ -48,11 +45,8 @@
 		AABDA6821D36620000CE1E2E /* View+SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDA66B1D36620000CE1E2E /* View+SnapKit.swift */; };
 		AABDA6831D36620000CE1E2E /* ViewController+SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDA66C1D36620000CE1E2E /* ViewController+SnapKit.swift */; };
 		AABDA6841D36620000CE1E2E /* ViewController+SnapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDA66C1D36620000CE1E2E /* ViewController+SnapKit.swift */; };
-		AABDA6861D36732900CE1E2E /* AccumulatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AABDA6851D36732900CE1E2E /* AccumulatorView.xib */; };
 		AABDA6871D36732900CE1E2E /* AccumulatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AABDA6851D36732900CE1E2E /* AccumulatorView.xib */; };
-		AABDA6891D3675D000CE1E2E /* AccumulatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDA6881D3675D000CE1E2E /* AccumulatorView.swift */; };
 		AABDA68A1D3675D000CE1E2E /* AccumulatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDA6881D3675D000CE1E2E /* AccumulatorView.swift */; };
-		AABDA68D1D36811C00CE1E2E /* AccumulatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDA68C1D36811C00CE1E2E /* AccumulatorViewModel.swift */; };
 		AABDA68E1D36811C00CE1E2E /* AccumulatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABDA68C1D36811C00CE1E2E /* AccumulatorViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -140,12 +134,12 @@
 				AA313D3B1D3E2736002E274C /* ViewFactory.swift */,
 			);
 			name = Helpers;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		AA5E68B51D36206F00F890FC = {
 			isa = PBXGroup;
 			children = (
-				AA828B211D3E22FA00998913 /* Classes */,
 				AA5E68C01D36206F00F890FC /* Call Provider */,
 				AA5E68D81D36217E00F890FC /* Frameworks */,
 				AA5E68DD1D36217E00F890FC /* Notifier */,
@@ -186,33 +180,13 @@
 		AA5E68DD1D36217E00F890FC /* Notifier */ = {
 			isa = PBXGroup;
 			children = (
+				AA313D3A1D3E270B002E274C /* Helpers */,
 				AA828B251D3E235700998913 /* Resources */,
 				AA828B261D3E236100998913 /* View */,
 				AA828B271D3E236A00998913 /* View Controller */,
-			);
-			path = Notifier;
-			sourceTree = "<group>";
-		};
-		AA5E68EB1D362CA100F890FC /* View */ = {
-			isa = PBXGroup;
-			children = (
-				AABDA6881D3675D000CE1E2E /* AccumulatorView.swift */,
-				AABDA6851D36732900CE1E2E /* AccumulatorView.xib */,
-				AA5E68EC1D362CDB00F890FC /* SpinnerView.swift */,
-				AA5E68EE1D362D0B00F890FC /* SpinnerView.xib */,
-			);
-			name = View;
-			path = Notifier;
-			sourceTree = "<group>";
-		};
-		AA828B211D3E22FA00998913 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				AA313D3A1D3E270B002E274C /* Helpers */,
-				AA5E68EB1D362CA100F890FC /* View */,
 				AABDA68B1D3680F800CE1E2E /* View Model */,
 			);
-			name = Classes;
+			path = Notifier;
 			sourceTree = "<group>";
 		};
 		AA828B221D3E231400998913 /* View */ = {
@@ -252,7 +226,9 @@
 		AA828B261D3E236100998913 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AAD1D02B1D46607E0035E8C9 /* Accumulator */,
 				AA5E68E01D36217E00F890FC /* MainInterface.storyboard */,
+				AAD1D02C1D4660890035E8C9 /* Spinner */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -291,7 +267,24 @@
 				AABDA68C1D36811C00CE1E2E /* AccumulatorViewModel.swift */,
 			);
 			name = "View Model";
-			path = Notifier;
+			sourceTree = "<group>";
+		};
+		AAD1D02B1D46607E0035E8C9 /* Accumulator */ = {
+			isa = PBXGroup;
+			children = (
+				AABDA6881D3675D000CE1E2E /* AccumulatorView.swift */,
+				AABDA6851D36732900CE1E2E /* AccumulatorView.xib */,
+			);
+			name = Accumulator;
+			sourceTree = "<group>";
+		};
+		AAD1D02C1D4660890035E8C9 /* Spinner */ = {
+			isa = PBXGroup;
+			children = (
+				AA5E68EC1D362CDB00F890FC /* SpinnerView.swift */,
+				AA5E68EE1D362D0B00F890FC /* SpinnerView.xib */,
+			);
+			name = Spinner;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,9 +378,7 @@
 			files = (
 				AA5E68CC1D36206F00F890FC /* (null) in Resources */,
 				AA5E68C91D36206F00F890FC /* Assets.xcassets in Resources */,
-				AABDA6861D36732900CE1E2E /* AccumulatorView.xib in Resources */,
 				AA6F945A1D461B1C000AC288 /* LaunchScreen.storyboard in Resources */,
-				AA5E68F11D36525C00F890FC /* SpinnerView.xib in Resources */,
 				AA5E68C71D36206F00F890FC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,12 +408,8 @@
 				AABDA6811D36620000CE1E2E /* View+SnapKit.swift in Sources */,
 				AABDA66D1D36620000CE1E2E /* Constraint.swift in Sources */,
 				AA5E68C41D36206F00F890FC /* ViewController.swift in Sources */,
-				AA5E68F01D36525C00F890FC /* SpinnerView.swift in Sources */,
 				AABDA66F1D36620000CE1E2E /* ConstraintAttributes.swift in Sources */,
 				AABDA67D1D36620000CE1E2E /* LayoutConstraint.swift in Sources */,
-				AABDA68D1D36811C00CE1E2E /* AccumulatorViewModel.swift in Sources */,
-				AABDA6891D3675D000CE1E2E /* AccumulatorView.swift in Sources */,
-				AA313D3C1D3E2736002E274C /* ViewFactory.swift in Sources */,
 				AABDA6751D36620000CE1E2E /* ConstraintMaker.swift in Sources */,
 				AA5E68C21D36206F00F890FC /* AppDelegate.swift in Sources */,
 				AABDA6831D36620000CE1E2E /* ViewController+SnapKit.swift in Sources */,

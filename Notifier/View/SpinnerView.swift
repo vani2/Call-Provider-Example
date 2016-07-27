@@ -15,7 +15,7 @@ private struct Colors {
     static let inactive = UIColor(red: 13/255.0, green: 94/255.0, blue: 79/255.0, alpha: 1)
 }
 
-//todo: добавить анимацию тени
+
 class SpinnerView: UIView {
 
     let progressLayer = CAShapeLayer()
@@ -31,6 +31,7 @@ class SpinnerView: UIView {
         super.awakeFromNib()
         setupFillLayer()
         setupLayer()
+        setupShadowLayer()
     }
     
     override func layoutSubviews() {
@@ -46,6 +47,8 @@ class SpinnerView: UIView {
         progressLayer.fillColor = nil
         progressLayer.strokeColor = Colors.sunYellow.cgColor
         
+        progressLayer.shadowRadius = 10
+        
         layer.addSublayer(progressLayer)
     }
     
@@ -60,6 +63,10 @@ class SpinnerView: UIView {
         layer.addSublayer(fillLayer)
     }
     
+    private func setupShadowLayer() {
+        
+    }
+    
     private func updatePath() {
         let radius = CGFloat(bounds.height / 2) - progressLayer.lineWidth
         let startAngle = CGFloat(-M_PI / 2)
@@ -69,10 +76,11 @@ class SpinnerView: UIView {
                                 radius: radius,
                                 startAngle: startAngle,
                                 endAngle: endAngle,
-                                clockwise: true)
+                                clockwise: true).cgPath
         
-        progressLayer.path = path.cgPath
-        fillLayer.path = path.cgPath
+        progressLayer.path = path
+        fillLayer.path = path
+        fillLayer.shadowPath = path
     }
     
     private func animateStroke() {
@@ -89,6 +97,9 @@ class SpinnerView: UIView {
             if endValue < 0.4 {
                 progressLayer.strokeColor = Colors.sunRed.cgColor
             }
+            progressLayer.shadowColor = progressLayer.strokeColor
+            
+            progressLayer.shadowOpacity = 1
         }
     }
 }
