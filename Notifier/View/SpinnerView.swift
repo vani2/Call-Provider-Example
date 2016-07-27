@@ -47,7 +47,7 @@ class SpinnerView: UIView {
         progressLayer.fillColor = nil
         progressLayer.strokeColor = Colors.sunYellow.cgColor
         
-        progressLayer.shadowRadius = 10
+        progressLayer.shadowRadius = 2
         
         layer.addSublayer(progressLayer)
     }
@@ -99,7 +99,14 @@ class SpinnerView: UIView {
             }
             progressLayer.shadowColor = progressLayer.strokeColor
             
-            progressLayer.shadowOpacity = 1
+            let shadowAnimation = CABasicAnimation(keyPath: "shadowOpacity")
+            shadowAnimation.fromValue = 0
+            shadowAnimation.toValue = 1
+            shadowAnimation.duration = Double(endValue)
+            shadowAnimation.autoreverses = true
+            shadowAnimation.fillMode = kCAFillModeBackwards
+            
+            progressLayer.add(shadowAnimation, forKey: nil)
         }
     }
 }
