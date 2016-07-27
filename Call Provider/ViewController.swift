@@ -24,10 +24,10 @@ class ViewController: UIViewController {
         content.body = "Ваш баланс 300 руб."
         content.categoryIdentifier = "balance"
         
-        let request = UNNotificationRequest(
-            identifier: "balance",
-            content: content,
-            trigger: UNTimeIntervalNotificationTrigger(timeInterval: 3, repeats: false))
+        let request = UNNotificationRequest(identifier: "balance",
+                                            content: content,
+                                            trigger: UNTimeIntervalNotificationTrigger(timeInterval: 3,
+                                                                                       repeats: false))
         
         UNUserNotificationCenter.current().add(request)
     }
