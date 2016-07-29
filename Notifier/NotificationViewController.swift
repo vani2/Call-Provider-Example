@@ -16,6 +16,8 @@ class NotificationViewController: UIViewController {
     @IBOutlet weak var restsStack: UIStackView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    private var balanceValue = -100
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
@@ -33,6 +35,8 @@ class NotificationViewController: UIViewController {
         
         ViewFactory.fillStackView(restsStack,
                                   withRests: viewModels)
+        
+        balanceLabel.text = "\(balanceValue)₽"
     }
 }
 
@@ -48,6 +52,7 @@ extension NotificationViewController: UNNotificationContentExtension {
         switch response.actionIdentifier {
         case "addBalance":
             addBalance()
+            completion(.doNotDismiss)
         case "myPlan":
             openMainApplication()
             completion(.dismiss)
@@ -66,6 +71,8 @@ extension NotificationViewController: UNNotificationContentExtension {
 
         DispatchQueue.main.after(when: .now() + 2) {
             withExtendedLifetime(self, {
+                self.balanceValue += 500
+                self.balanceLabel.text = "\(self.balanceValue)₽"
                 self.balanceLabel.isHidden = false
                 self.activityIndicator.stopAnimating()
             })

@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func registerCategories() {
-        let showMore = UNNotificationAction(identifier: "showMore",
+        let showMoreAction = UNNotificationAction(identifier: "showMore",
                                             title: "Подробнее",
                                             options: [])
         let addBalanceAction = UNNotificationAction(identifier: "addBalance",
@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                                 options: [])
         
         let balanceCategory = UNNotificationCategory(identifier: "balance",
-                                                     actions: [showMore, addBalanceAction, myPlanAction],
+                                                     actions: [showMoreAction, addBalanceAction, myPlanAction],
                                                      intentIdentifiers: [],
                                                      options: [])
         
