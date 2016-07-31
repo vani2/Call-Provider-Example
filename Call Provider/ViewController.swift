@@ -20,8 +20,8 @@ class ViewController: UIViewController {
     @IBAction func sendNotification() {
         let content = UNMutableNotificationContent()
         content.title = "Добрый день!"
-        content.subtitle = "Ваш карманный друг"
-        content.body = "Ваш баланс 300 руб."
+        content.subtitle = "Вы ушли в минус :("
+        content.body = "Ваш баланс -100 руб."
         content.categoryIdentifier = "balance"
         
         let request = UNNotificationRequest(identifier: "balance",
